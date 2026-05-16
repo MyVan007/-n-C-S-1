@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website Quản Lý Công Việc Cá Nhân</title>
+
+   <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="#">
+            <i class="fa-solid fa-list-check"></i>
+            Quản Lý Công Việc
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">
+                        Trang Chủ
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#task-section">
+                        Danh Sách
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="statistics.html">
+                        Thống Kê
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        Liên Hệ
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">
+                        Đăng Nhập
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">
+                        Đăng Ký
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+
+    <div class="container text-center">
+
+        <h1 class="fw-bold hero-title">
+            Quản Lý Công Việc Cá Nhân
+        </h1>
+
+        <p class="lead mt-3">
+            Giúp bạn quản lý công việc hiệu quả hơn mỗi ngày
+        </p>
+
+        <a href="#task-section"
+           class="btn btn-light btn-lg mt-3">
+
+            Bắt Đầu Ngay
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- Main -->
+<div class="container mt-5">
+
+    <div class="row">
+
+        <!-- Task -->
+        <div class="col-lg-12">
+
+            <section id="task-section">
+
+               <!-- Add Task -->
+<div class="card shadow-lg border-0 mb-4 add-task-card">
+
+    <div class="card-body p-4">
+
+        <h5 class="text-primary fw-bold mb-4">
+
+            <i class="fa-solid fa-clipboard-check"></i>
+            Thêm công việc mới
+
+        </h5>
+
+        <div class="row g-3 align-items-end">
+
+            <!-- Task Name -->
+            <div class="col-lg-3 col-md-6">
+
+                <label class="form-label fw-semibold">
+                    Tên công việc
+                </label>
+
+                <input type="text"
+                       id="taskInput"
+                       class="form-control"
+                       placeholder="Nhập tên công việc">
+
+            </div>
+
+            <!-- Description -->
+            <div class="col-lg-3 col-md-6">
+
+                <label class="form-label fw-semibold">
+                    Mô tả
+                </label>
+
+                <input type="text"
+                       id="descriptionInput"
+                       class="form-control"
+                       placeholder="Nhập mô tả công việc">
+
+            </div>
+
+            <!-- Priority -->
+            <div class="col-lg-2 col-md-4">
+
+                <label class="form-label fw-semibold">
+                    Mức độ ưu tiên
+                </label>
+
+                <select id="priorityInput"
+                        class="form-select">
+
+                    <option>Cao</option>
+                    <option selected>Trung bình</option>
+                    <option>Thấp</option>
+
+                </select>
+
+            </div>
+
+            <!-- Deadline -->
+            <div class="col-lg-2 col-md-4">
+
+                <label class="form-label fw-semibold">
+                    Hạn hoàn thành
+                </label>
+
+                <input type="date"
+                       id="dateInput"
+                       class="form-control">
+
+            </div>
+
+            <!-- Button -->
+            <div class="col-lg-2 col-md-4 d-grid">
+
+                <button class="btn btn-primary add-btn"
+                        onclick="addTask()">
+
+                    <i class="fa-solid fa-plus"></i>
+                    Thêm công việc
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+               <!-- Task List -->
+<div class="card shadow-lg border-0 task-table-card">
+
+    <div class="card-body p-4">
+
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+
+            <h4 class="text-primary fw-bold">
+
+                <i class="fa-solid fa-table-list"></i>
+                Danh sách công việc
+
+            </h4>
+
+            <div class="search-box">
+
+                <input type="text"
+                       id="searchInput"
+                       class="form-control"
+                       placeholder="Tìm kiếm công việc..."
+                       onkeyup="searchTask()">
+
+            </div>
+
+        </div>
+
+        <!-- Table -->
+        <div class="table-responsive">
+
+            <table class="table table-hover align-middle">
+
+                <thead class="table-light">
+
+                    <tr>
+
+                        <th>STT</th>
+                        <th>Tên công việc</th>
+                        <th>Mô tả</th>
+                        <th>Mức độ ưu tiên</th>
+                        <th>Hạn hoàn thành</th>
+                        <th>Trạng thái</th>
+                        <th>Thao tác</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="taskList">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    </div>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer mt-5" id="contact">
+
+    <div class="container text-center">
+
+        <h3 class="fw-bold mb-4">
+            <i class="fa-solid fa-envelope"></i>
+            Thông Tin Liên Hệ
+        </h3>
+
+        <p class="mb-2">
+            <strong>Sinh viên thực hiện:</strong>
+            Huỳnh Ngọc Mỹ Vân
+        </p>
+
+        <p class="mb-2">
+            <strong>Chuyên ngành:</strong>
+            Công Nghệ Kỹ Thuật Máy Tính
+        </p>
+
+        <p class="mb-2">
+            <strong>Email:</strong>
+            vanhnm.25ceb@vku.udn.vn
+        </p>
+
+        <p class="mb-2">
+            <strong>Lớp:</strong>
+            25CE2
+        </p>
+
+        <p class="mt-4 small opacity-75">
+
+            © 2026 Website Quản Lý Công Việc Cá Nhân.  
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

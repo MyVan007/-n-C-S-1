@@ -1,0 +1,201 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #f4f9ff;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar{
+    padding: 15px;
+}
+
+/* Hero */
+.hero{
+    background: white;
+    color:black;
+    padding: 100px 20px 60px;
+}
+
+/* Card */
+.card{
+    border-radius: 20px;
+}
+
+/* Form */
+.form-control{
+    height: 50px;
+    border-radius: 12px;
+}
+
+/* Button */
+.btn{
+    border-radius: 12px;
+}
+
+/* Task */
+.list-group-item{
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Completed */
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Statistics */
+.stat-box{
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Footer */
+.footer{
+    background: #0d6efd;
+    color: white;
+    padding: 50px 20px;
+}
+
+/* Login + Register */
+.login-page{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background: #f4f9ff;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .hero h1{
+        font-size: 30px;
+    }
+
+}
+/* Add Task */
+
+.add-task-card{
+    border-radius: 18px;
+}
+
+.add-task-card .form-label{
+    font-size: 14px;
+    color: #333;
+}
+
+.add-task-card .form-control,
+.add-task-card .form-select{
+    height: 50px;
+    border-radius: 10px;
+}
+
+.add-btn{
+    height: 50px;
+    font-weight: 600;
+}
+/* Task Table */
+
+.task-table-card{
+    border-radius: 20px;
+}
+
+.search-box{
+    width: 300px;
+}
+
+.table th{
+    font-weight: 700;
+}
+
+.priority{
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.high{
+    background: #ffd6d6;
+    color: red;
+}
+
+.medium{
+    background: #fff3cd;
+    color: #d39e00;
+}
+
+.low{
+    background: #d4edda;
+    color: green;
+}
+
+.status{
+    font-weight: 600;
+}
+
+.working{
+    color: #0d6efd;
+}
+
+.done{
+    color: green;
+}
+
+/* Statistics Page */
+
+.statistics-page{
+    min-height: 100vh;
+    background: #f4f9ff;
+    padding: 80px 20px;
+}
+
+.stat-card{
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.hero-title{
+    font-size: 43px;
+}
+@media(max-width:768px){
+
+    .hero{
+        padding: 90px 15px 50px;
+        text-align: center;
+    }
+
+    .hero-title{
+        font-size: 28px;
+    }
+
+    .lead{
+        font-size: 16px;
+    }
+
+    .search-box{
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .table{
+        font-size: 14px;
+    }
+
+    .add-btn{
+        width: 100%;
+    }
+
+    .footer{
+        padding: 30px 15px;
+    }
+
+}
